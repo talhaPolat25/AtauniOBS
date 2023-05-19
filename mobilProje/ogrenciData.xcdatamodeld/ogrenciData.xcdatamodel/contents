@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Dersler" representedClassName="Dersler" syncable="YES" codeGenerationType="class">
+        <attribute name="ders_adi" attributeType="String"/>
+        <attribute name="final" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vize" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="dersler" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ogrenci2" inverseName="dersler1" inverseEntity="Ogrenci2"/>
+    </entity>
+    <entity name="Duyurular" representedClassName="Duyurular" syncable="YES" codeGenerationType="class">
+        <attribute name="duyuru" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Ogrenci2" representedClassName="Ogrenci2" syncable="YES">
+        <attribute name="ad" optional="YES" attributeType="String"/>
+        <attribute name="mail" optional="YES" attributeType="String"/>
+        <attribute name="notlarim" optional="YES" attributeType="Transformable"/>
+        <attribute name="onay" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sifre" optional="YES" attributeType="String"/>
+        <attribute name="soyad" optional="YES" attributeType="String"/>
+        <attribute name="tc" optional="YES" attributeType="String"/>
+        <attribute name="telefon" optional="YES" attributeType="String"/>
+        <attribute name="unvan" optional="YES" attributeType="String"/>
+        <relationship name="dersler1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dersler" inverseName="dersler" inverseEntity="Dersler"/>
+    </entity>
+    <entity name="YemekListesi" representedClassName="YemekListesi" syncable="YES" codeGenerationType="class">
+        <attribute name="anaYemek" optional="YES" attributeType="String"/>
+        <attribute name="araYemek" optional="YES" attributeType="String"/>
+        <attribute name="tarih1" optional="YES" attributeType="String"/>
+        <attribute name="tatli" optional="YES" attributeType="String"/>
+    </entity>
+</model>
