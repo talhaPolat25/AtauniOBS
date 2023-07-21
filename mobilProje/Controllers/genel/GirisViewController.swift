@@ -55,6 +55,7 @@ class GirisViewController: UIViewController,UITextFieldDelegate {
                 if let destVC = segue.destination as? UINavigationController,
                     let targetController = destVC.topViewController as? OgretimGorevlisiViewController {
                     targetController.modalPresentationStyle = .fullScreen
+                    
                 }
             }
         if let yoneticiVc = segue.destination as? YoneticiViewController{
